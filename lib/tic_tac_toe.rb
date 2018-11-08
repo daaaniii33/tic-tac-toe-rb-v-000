@@ -91,3 +91,14 @@ end
 def winner(board)
  won?(board) && board[won?(board)[0]]
 end
+
+def play(board)
+  until over?(board)
+    turn(board)
+  end 
+  if  won?(board)
+    puts "Congatulations" #{winner(board)}!""
+  else
+    puts "Cat's Game"
+end 
+end
